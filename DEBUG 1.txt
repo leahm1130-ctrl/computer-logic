@@ -1,0 +1,37 @@
+Name: Leah Medina
+DEBUG Exercise 01
+
+Question: What steps would you take to identify any issues in the code?
+Your Response: I would review the declarations and trace the pseudocode line by line to make sure inputs are read before variables are used. I would check the average calculation, spelling, loop condition, and indentation. I would test passing, failing, borderline, and quit cases.
+
+Question: What actions could the developer have taken to minimize errors?
+Your Response: The developer could use consistent variable names, clear indentation, comments, and a checklist for each input and calculation. Testing several sample scores would help catch errors early.
+
+// Determine whether the average of two tests meets the passing score.
+// Enter 0 for the first score to stop processing students.
+start
+   Declarations
+      num firstTest
+      num secondTest
+      num average
+      num PASSING = 60
+
+   output "Enter first score or 0 to quit"
+   input firstTest
+   while firstTest <> 0
+      output "Enter second score"
+      input secondTest
+      average = (firstTest + secondTest) / 2
+      output "Average is ", average
+      if average >= PASSING then
+         output "Pass"
+      else
+         output "Fail"
+      endif
+      output "Enter first score or 0 to quit"
+      input firstTest
+   endwhile
+stop
+
+// Tests: 100, 80 => 90 Pass; 50, 60 => 55 Fail;
+// 60, 60 => 60 Pass; first score 0 => stop.
